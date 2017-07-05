@@ -117,7 +117,7 @@ mongo_zip_and_drop()
         cd ${OUT_DIR}
         # TODO del global var LOG_FILE  =\
         tar cvzf ${FILTER_DIR}.tar.gz ${FILTER_DIR} 2>&1 | tee -a ${LOG_FILE}
-        if [ -n ${FILTER_DIR}.tar.gz ]; then
+        if [ -e ${FILTER_DIR}.tar.gz ]; then
             rm -rf ${FILTER_DIR}
         fi
         cd -
